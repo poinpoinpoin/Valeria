@@ -8,120 +8,107 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="corazoncito.png">
     <style>
-        body {
-            background-color: #13161c;
-            padding: 10px;
-        }
+        /* General */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #ffccd5);
+    color: #6d214f;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-        .container {
-            text-align: center;
-            padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            margin-bottom: 0px;
-            padding: 60px 100px 100px;
+/* Contenedor principal */
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffc1e3;
+}
 
-        }
+/* Título */
+h1 {
+    font-size: 3rem;
+    color: #ff6f91;
+    margin-bottom: 20px;
+}
 
-        h1 {
-            color: #e91e63;
-            font-size: 60px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+/* Texto principal */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
 
-        p {
-            font-size: 30px;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            color: white;
-        }
+/* Palabras destacadas */
+.palabraTITULO {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ff69b4;
+    animation: heartbeat 1.5s infinite;
+}
 
-        .palabraTITULO {
-            font-size: 80px;
-            text-align: center;
-            font-weight: 1000;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-        }
+.palabraTITULO .corazon {
+    font-size: 2.5rem;
+    color: #ff3e96;
+}
 
-        .corazon {
-            color: red;
-        }
+/* Animación de latido */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
 
-        .valeriaaa {
-            width: 100%;
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            justify-content: space-between;
-            padding-bottom: 10px;
-        }
+/* Galería */
+.valeriaaa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
 
-        .valeria {
-            width: 200px;
-            margin-left: 30px;
-            margin-right: 30px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-            border: 5px solid black;
-            border-radius: 10px;
-        }
+.valeria {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #ffc1e3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        .yo {
-            width: 100%;
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 100px;
-            justify-content: space-between;
-            flex-direction: row;
-            display: flex;
-            justify-content: center;
-        }
+.valeria:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
 
-        .burla {
-            color: black;
-            margin: 150px 10px;
-            font-size: 80px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-        }
+/* Pie de página */
+footer {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #ffe4ec;
+    border-top: 2px solid #ffc1e3;
+}
 
-        .juntos {
-            width: 250px;
-            margin: 50px;
-            border: 5px solid black;
-            border-radius: 10px;
-        }
+.piedepagina {
+    font-size: 1rem;
+    color: #ff6f91;
+    line-height: 1.5;
+}
 
-        nav {
-            justify-content: center;
-            text-align: center;
-            display: flex;
-        }
-
-        .divisor {
-            background-color: blue;
-            width: 80%;
-            height: 10px;
-        }
-
-        footer {
-            text-align: center;
-        }
-
-        .piedepagina {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            padding: 20px;
-        }
-
-        .cjota {
-            width: 500px;
-            margin-top: 80px;
-            margin-bottom: 20px;
-        }
+.cjota {
+    width: 300px;
+    margin: 30px;
+}
     </style>
 </head>
 
@@ -142,7 +129,7 @@
         <div class="divisor"></div>
     </nav>
 
-    <p class="palabraTITULO">TÚ,<br>TAN HERMOSA🥹🥰<span class="corazon">❤</span></p>
+    <p class="palabraTITULO">LA MÁS HERMOSA😍<span class="corazon"></span></p>
 
     <section class="valeriaaa">
         <img src="v1.jpg" alt="" class="valeria">
@@ -167,17 +154,6 @@
         <div class="divisor"></div>
     </nav>
 
-    <p class="palabraTITULO">NOSOTROS <span class="corazon">❤</span></p>
-
-    <section class="valeriaaa">
-        <img src="lv1.jpg" alt="" class="juntos">
-        <img src="lv2.jpg" alt="" class="juntos">
-        <img src="lv3.jpg" alt="" class="juntos">
-        <img src="lv4.jpg" alt="" class="juntos">
-        <img src="lv5.jpg" alt="" class="juntos">
-        <img src="lv6.jpg" alt="" class="juntos">
-    </section>
-
     <footer>
         <p class="piedepagina">
             ...nuestro tiempo juntos fue breve, así que quiero que sepas cuánto significaste para mí:
@@ -186,7 +162,6 @@
             una huella en mi corazón. Siempre recordaré el quemadito de tu cabeza, tus breves abrazos,
             tus fotos y los pelitos de tus piernas. Con todo mi cariño y burlas xd, Luis....
         </p>
-        <img class="cjota" src="gileadda.jpg" alt="">
     </footer>
 
 </body>
